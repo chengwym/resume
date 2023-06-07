@@ -1,0 +1,80 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+% \usepackage{NotoSansSC_external}
+% \usepackage{NotoSerifCJKsc_external}
+% \usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{cite}
+
+\begin{document}
+\pagenumbering{gobble} % suppress displaying page number
+
+\name{Jingbo Cheng 程靖博}
+
+\basicInfo{
+  \email{chengwym@gmail.com} \textperiodcentered\ 
+  \phone{(+86) 18686370855} \textperiodcentered\ 
+  \github[github]{https://github.com/chengwym} \textperiodcentered\ 
+  \linkedin[linkedin]{https://www.linkedin.com/in/jingbo-cheng-a661a3252/}}
+ 
+\section{\faGraduationCap\  教育背景}
+\datedsubsection{\textbf{北京大学}}{2021 -- 2025}
+\textit{本科.} 计算机系
+
+\section{\faHeartO\ 获奖情况}
+\datedline{37届全国物理竞赛(CPhO)银牌}{2020年11月}
+
+\section{\faUsers\ 实习经历}
+\datedsubsection{\textbf{概率投资} \textit{机器学习实习生}}{2022年12月 -- 2022年3月}
+模块化自动训练框架
+\begin{itemize}
+  \item 搭建完整训练框架，实验分为特征选择，模型训练，预测结果生成报告。 核心文件为配置文件，只需要修改配置文件内的一些参数，即可批量跑出结果对比。
+  \item 使用numba，CPython等加速手段，使回测时间有所提升。
+\end{itemize}
+模型融合
+\begin{itemize}
+  \item 低频场景下，使用不同的y，不同的loss分别训练出不同的模型，再将训练出的模型信号用多种方法融合。
+使用xgboost对信号融合，并增加了信号的可解释性。融合后产生的信号。在回测效果中一年扣除手续费后指数增强
+年化超额收益有42\%，较融合前信号结果有较大提升。
+\end{itemize}
+
+\section{\faObjectGroup\ 项目经历}
+\datedsubsection{\textbf{利用计算机视觉方法研究地震波形图} \textit{北京大学}}{2022年12月 -- 2023年1月}
+\begin{itemize}
+  \item 处理mseed格式数据，得到横坐标为offset，纵坐标为时间的地震图谱。
+用resnet模型进行地震图谱的分类。
+  \item 用resnet模型，通过地震图谱，预测地震的震源深度，冰川崩塌的力方位角。以及产生地点的经纬度。
+\end{itemize}
+
+\datedsubsection{\textbf{kaggle预测信用卡评分} \textit{北京大学}}{2022年5月 -- 2022年6月}
+\begin{itemize}
+  \item 基于梯度提升决策树的信用卡评分模型，以 Kaggle 公开数据集为基础, 进行了精细的特征工程和严格的统计分
+  析, 选择了梯度提升决策树作为算法, 并建立有经济学意义的模型转换信用分。
+  \item 选择梯度提升决策树模型, 采用 Baysian Optimization 进行超参数优化, 交叉验证选择训练轮数, 然后正式训练模
+  型, 计算特征重要性——根据决策树的结点分裂情况计算。
+  \item 在违约概率预测上得到了 0.86910 的优秀 AUC，与排行榜前五同样score。
+\end{itemize}
+
+% Reference Test
+%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
+%An xxx optimized for xxx\cite{verma2015large}
+%\begin{itemize}
+%  \item main contribution
+%\end{itemize}
+
+\section{\faCogs\ 技能}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.5ex]
+  \item C++, Python, PyTorch, Linux, LaTeX, Shell Script, HTML, JavaScript, Java
+  \item CET4, CET6
+\end{itemize}
+
+%% Reference
+%\newpage
+%\bibliographystyle{IEEETran}
+%\bibliography{mycite}
+\end{document}
